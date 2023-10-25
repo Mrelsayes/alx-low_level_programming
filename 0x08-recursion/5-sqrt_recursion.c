@@ -11,7 +11,7 @@ int sqroot(int n, int i)
 		return (i);
 	else if (i * i < n)
 		return (sqroot(n, ++i));
-	else if (i * i != n)
+	else
 		return (-1);
 }
 /**
