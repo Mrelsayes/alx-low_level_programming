@@ -1,37 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
 /**
- * main - adds positive numbers
- * @argc: num of arguments
- * @argv: array of arguments
- * Return: 0
- */
+ * main -  prints its name, followed by a new line
+ * @argc: count of argvs
+ * @argv: array of strings
+ * Return: 0 || 1
+*/
 int main(int argc, char *argv[])
 {
-	unsigned int x, sum, n;
+	int count, str, sum = 0;
 
-	sum = 0;
-
-	if (argc < 3)
+	for (count = 1; count < argc; count++)
 	{
-		printf("%d\n", 0);
-		return (0);
-	}
-	while (argc-- && argc > 0)
-	{
-		for (x = 0; argv[argc][x] != '\0'; x++)
+		for (str = 0; argv[count][str]; str++)
 		{
-			if (!(isdigit(argv[argc][x])))
+			if (argv[count][str] < '0' || argv[count][str] > '9')
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		n = atoi(argv[argc]);
-		sum += n;
+		sum += atoi(argv[count]);
 	}
 	printf("%d\n", sum);
-	return (sum);
+	return (0);
 }
