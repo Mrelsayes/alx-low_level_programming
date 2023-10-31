@@ -7,12 +7,12 @@
 */
 char *str_concat(char *s1, char *s2)
 {
+	char *a;
 	int str_len, count, count2;
 
 	for (str_len = 0; s1[str_len] || s2[str_len]; str_len++)
 	;
-	char *a = malloc(str_len * sizeof(char));
-	
+	a = malloc(str_len * sizeof(char));
 	if (s1 == 0)
 		s1 = "";
 	if (s2 == 0)
