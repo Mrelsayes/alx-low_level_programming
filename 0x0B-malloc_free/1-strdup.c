@@ -2,7 +2,7 @@
 /**
  * _strdup - copy of the string given
  * @str: string to be coppied
- * Return: 1 || 0
+ * Return: a || NULL
 */
 char *_strdup(char *str)
 {

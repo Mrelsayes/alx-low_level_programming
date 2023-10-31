@@ -3,7 +3,7 @@
  * str_concat - copy of 2 strings given
  * @s1: 1st string to be coppied
  * @s2: 2nd string to be coppied
- * Return: 1 || 0
+ * Return: a || NULL
 */
 char *str_concat(char *s1, char *s2)
 {

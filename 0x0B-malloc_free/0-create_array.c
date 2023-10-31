@@ -3,6 +3,7 @@
  * create_array - creates an array and initializes it with a specific char
  * @size: size of array
  * @c: character
+ * Return: a || NULL
 */
 char *create_array(unsigned int size, char c)
 {
