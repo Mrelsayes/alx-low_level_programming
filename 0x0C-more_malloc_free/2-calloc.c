@@ -7,17 +7,17 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	int count, full_size = nmemb * size;
 	void *a;
 	char *flag;
-	unsigned int index;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	a = malloc(size * nmemb);
+	a = malloc(full_size);
 	if (a == NULL)
 		return (NULL);
 	flag = a;
-	for (index = 0; index < (size * nmemb); index++)
-		flag[index] = '\0';
+	for (count = 0; count < full_size; count++)
+		flag[count] = 0;
 	return (a);
 }
