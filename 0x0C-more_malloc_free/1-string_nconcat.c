@@ -8,30 +8,42 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int str_len1, str_len2, count1;
 	char *a;
+	unsigned int str_len1 = 0, str_len2 = 0, count;
 
 	if (s1 == NULL)
 		s1 = "";
+
 	if (s2 == NULL)
 		s2 = "";
-	for (str_len1 = 0; s1[str_len1] != '\0'; str_len1++)
-	;
-	for (str_len2 = 0; s2[str_len2] != '\0'; str_len2++)
-	;
+
+	while (s1[str_len1] != '\0')
+	{
+		str_len1++;
+	}
+
+	while (s2[str_len2] != '\0')
+	{
+		str_len2++;
+	}
+
 	if (n > str_len2)
-		n = str_len2;
-	a = malloc(sizeof(char) * (str_len1 + n + 1));
+	n = str_len2;
+	a = malloc((str_len1 + n + 1) * sizeof(char));
+
 	if (a == NULL)
-		return (NULL);
-	for (count1 = 0; count1 < str_len1; count1++)
+		return (0);
+
+	for (count = 0; count < str_len1; count++)
 	{
-		a[count1] = s1[count1];
+		a[count] = s1[count];
 	}
-	for (; count1 <= (n + str_len1); count1++)
+
+	for (; count < (str_len1 + n); count++)
 	{
-		a[count1] = s2[str_len1 - count1];
+		a[count] = s2[count - str_len1];
 	}
-	a[count1] = '\0';
-	return (a);
+	a[count] = '\0';
+
+return (a);
 }
