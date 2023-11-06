@@ -1,9 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
 #ifndef FILE_DOG
 #define FILE_DOG
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * struct dog - dog's structure 
+ * struct dog - dog's structure
  * @name: type = char *
  * @age: type = float
  * @owner: type = char *
@@ -15,6 +15,9 @@ struct dog
 	char *owner;
 };
 
+/**
+ * dog_t - Typedef for struct dog
+ */
 typedef struct dog dog_t;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
