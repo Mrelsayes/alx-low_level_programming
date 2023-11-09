@@ -1,4 +1,4 @@
-#include "main.h"
+#include "variadic_functions.h"
 
 void p_char(va_list a);
 void p_int(va_list a);
@@ -106,4 +106,3 @@ void print_all(const char * const format, ...)
 
 	va_end(args);
 }
-

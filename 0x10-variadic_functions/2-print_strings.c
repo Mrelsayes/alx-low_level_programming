@@ -1,4 +1,4 @@
-#include "main.h"
+#include "variadic_functions.h"
 /**
  * print_strings - prints strings, followed by a new line
  * @separator: separator between nums
