@@ -4,18 +4,19 @@
  * @array: array of ints
  * @size: size of array
  * @cmp: function pointer
+ * Return: i
 */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int x;
+	int i;
 
-	if (array && cmp)
+	if (array == NULL || cmp == NULL || size <= 0)
+		return (-1);
+
+	for (i = 0; i < size; i++)
 	{
-		for (x = 0; x < size; x++)
-		{
-			if (cmp(array[x]) != 0)
-				return (x);
-		}
+		if (cmp(array[i]))
+			return (i);
 	}
 	return (-1);
 }
