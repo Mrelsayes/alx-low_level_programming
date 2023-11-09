@@ -1,15 +1,8 @@
 #include "variadic_functions.h"
 
-void p_char(va_list a);
-void p_int(va_list a);
-void p_float(va_list a);
-void p_str(va_list a);
-void print_all(const char * const format, ...);
-
 /**
- * print_string - Prints a string.
- * @a: A list of arguments pointing to
- *       the string to be printed.
+ * p_str - Prints a string
+ * @a: list of arguments
  */
 void p_str(va_list a)
 {
@@ -27,9 +20,8 @@ void p_str(va_list a)
 }
 
 /**
- * print_char - Prints a char.
- * @a: A list of arguments pointing to
- *       the character to be printed.
+ * p_char - Prints a char
+ * @a: list of arguments
  */
 void p_char(va_list a)
 {
@@ -40,9 +32,8 @@ void p_char(va_list a)
 }
 
 /**
- * print_int - Prints an int.
- * @a: A list of arguments pointing to
- *       the integer to be printed.
+ * p_int - Prints an int
+ * @a: list of arguments
  */
 void p_int(va_list a)
 {
@@ -53,9 +44,8 @@ void p_int(va_list a)
 }
 
 /**
- * print_float - Prints a float.
- * @a: A list of arguments pointing to
- *       the float to be printed.
+ * p_float - Prints a float.
+ * @a: list of arguments
  */
 void p_float(va_list a)
 {
@@ -66,10 +56,9 @@ void p_float(va_list a)
 }
 
 /**
- * print_all - Prints anything, followed by a new line.
- * @format: A string of characters representing the argument types.
- * @...: A variable number of arguments to be printed.
-
+ * print_all - Prints anything, followed by a new line
+ * @format: string of argument types
+ * @...: variable number of arguments to be printed
  */
 void print_all(const char * const format, ...)
 {
@@ -89,7 +78,7 @@ void print_all(const char * const format, ...)
 	{
 		index2 = 0;
 
-		while (index2 < 4 && (*(format + index1) != *(all_funs[index2].symbol)))
+		while (index2 < 4 && (*(format + index1) != *(all_funs[index2].flag)))
 			index2++;
 
 		if (index2 < 4)
