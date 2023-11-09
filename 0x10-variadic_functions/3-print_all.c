@@ -11,11 +11,11 @@ void print_all(const char * const format, ...);
  * @a: A list of arguments pointing to
  *       the string to be printed.
  */
-void p_str(va_list arg)
+void p_str(va_list a)
 {
 	char *str;
 
-	str = va_arg(arg, char *);
+	str = va_arg(a, char *);
 
 	if (str == NULL)
 	{
@@ -31,11 +31,11 @@ void p_str(va_list arg)
  * @a: A list of arguments pointing to
  *       the character to be printed.
  */
-void p_char(va_list arg)
+void p_char(va_list a)
 {
 	char letter;
 
-	letter = va_arg(arg, int);
+	letter = va_arg(a, int);
 	printf("%c", letter);
 }
 
@@ -44,11 +44,11 @@ void p_char(va_list arg)
  * @a: A list of arguments pointing to
  *       the integer to be printed.
  */
-void p_int(va_list arg)
+void p_int(va_list a)
 {
 	int num;
 
-	num = va_arg(arg, int);
+	num = va_arg(a, int);
 	printf("%d", num);
 }
 
@@ -57,11 +57,11 @@ void p_int(va_list arg)
  * @a: A list of arguments pointing to
  *       the float to be printed.
  */
-void p_float(va_list arg)
+void p_float(va_list a)
 {
 	float num;
 
-	num = va_arg(arg, double);
+	num = va_arg(a, double);
 	printf("%f", num);
 }
 
