@@ -2,6 +2,7 @@
 /**
  * get_op_func - function pointer
  * @s: the operator passed as argument to the program
+ * Return: ops[i].f
 */
 int (*get_op_func(char *s))(int, int)
 {
