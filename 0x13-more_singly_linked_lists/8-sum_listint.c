@@ -2,7 +2,7 @@
 /**
  * sum_listint - returns the sum of all the data of linked list
  * @head: poiter to singly linked list
- * Return: sum 
+ * Return: sum
 */
 int sum_listint(listint_t *head)
 {
